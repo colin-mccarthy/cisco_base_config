@@ -1,0 +1,10 @@
+
+{% if device_os is defined and ‘cisco’ in device_os %}
+ntp server {{ ntp_service_ipv4 }}
+
+{% else %}
+ntp authenticate
+ntp authentication-key 1 md5 {{ ntp_peering_key }}
+ntp trusted-key 1
+ntp server {{ ntp_service_ipv4 }} key 1
+{% endif %}
