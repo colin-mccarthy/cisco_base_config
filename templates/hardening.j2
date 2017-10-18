@@ -6,13 +6,10 @@ no ip domain-lookup
 no ip http server
 no ip http secure-server
 no cdp run
-transport input ssh
 logging buffered 15000
 service password-encryption
 
 {% else %}
-ntp authenticate
-ntp authentication-key 1 md5 {{ ntp_peering_key }}
-ntp trusted-key 1
-ntp server {{ ntp_service_ipv4 }} key 1
+no ip http server
+no cdp run
 {% endif %}
