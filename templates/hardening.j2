@@ -1,6 +1,14 @@
 
 {% if device_os is defined and ‘cisco’ in device_os %}
-ntp server {{ ntp_service_ipv4 }}
+no service pad
+ip ssh version 2
+no ip domain-lookup
+no ip http server
+no ip http secure-server
+no cdp run
+transport input ssh
+logging buffered 15000
+service password-encryption
 
 {% else %}
 ntp authenticate

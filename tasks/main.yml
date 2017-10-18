@@ -3,7 +3,6 @@
 
 # tasks file for Ansible_Cisco_ios_12.2_hardening_w-template
 
-#Cisco IOS SNMP Playbook
 
 
 
@@ -24,33 +23,20 @@
         password: "{{ creds['password'] }}"
         auth_pass: "{{ creds['auth_pass'] }}"
 
-  - name: SHOW RUN | INC SNMP
-    ios_command:
-      provider: "{{ provider }}"
-      commands:
-        - show run | i snmp
-    register: before_snmp
 
-  - debug: var=before_snmp.stdout_lines
-
-  - name: SET COMMUNITY STRING
-    ios_config:
-      provider: "{{ provider }}"
-      authorize: yes
-      lines:
-        - snmp-server community thenetwork.engineer
-
-  - name: Configure NTP  
+  - name: HARDENING TEMPLATE  
     ios_config:   
       provider: "{{ provider }}" 
       src: if_device_os.j2
-      save: yes
+      save: no
 
 
-  - name: TRAP-SOURCE LOOPBACK0
-    ios_config:
+  - name: CONFIGURE BANNER FROM FILE
+    ios_banner:
       provider: "{{ provider }}"
       authorize: yes
-      lines:
-         - int lo0
-         - snmp-server trap-source Loopback0
+      banner: login
+      text: "{{ lookup('file', './vars/raw_banner.cfg') }}"
+      state: present
+
+
