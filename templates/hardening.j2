@@ -1,5 +1,4 @@
-
-{% if device_os is defined and ‘cisco’ in device_os %}
+{% for host in groups['ios'] %}
 no service pad
 ip ssh version 2
 no ip domain-lookup
@@ -12,4 +11,4 @@ service password-encryption
 {% else %}
 no ip http server
 no cdp run
-{% endif %}
+{% endfor %}
