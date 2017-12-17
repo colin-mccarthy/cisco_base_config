@@ -4,7 +4,7 @@ no service pad
 service timestamps debug datetime localtime
 service timestamps log datetime localtime
 service password-encryption
-logging buffered 15000
+logging buffered {{ log_buffer }}
 logging console critical
 logging monitor warnings
 enable secret 0 {{ enable_password }}
@@ -85,6 +85,26 @@ snmp-server enable traps ospf cisco-specific errors
 snmp-server enable traps ospf cisco-specific retransmit
 snmp-server enable traps ospf cisco-specific lsa
 snmp-server host {{ snmp_host }} {{ snmp_community }}
+
+tacacs-server host {{ tacacsserver1 }} key 7 {{ tacacs_key }}
+tacacs-server host {{ tacacsserver2 }} key 7 {{ tacacs_key }}
+tacacs-server timeout {{ tacacs_timeout }}
+tacacs-server directed-request
+
+line con 0
+line vty 0 4
+ access-class VTY_LINES in
+ exec-timeout {{ vty_exec_timeout }} 0
+ privilege level {{ vty_priv_level }}
+ transport input {{ vty_transport_input }}
+ transport output {{ vty_transport_output }}
+line vty 5 15
+ access-class VTY_LINES in
+ exec-timeout {{ vty_exec_timeout }} 0
+ privilege level {{ vty_priv_level }}
+ transport input {{ vty_transport_input }}
+ transport output {{ vty_transport_output }}
+
 
 
  
