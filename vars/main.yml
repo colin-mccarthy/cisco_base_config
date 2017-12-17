@@ -24,6 +24,39 @@ logging_size:
 
 stp_mode:
 
+ssh_timeout:
+ssh_version:
+
+tacacs_source_interface:
+
+logging_source_interface:
+logserver1:
+logserver2:
+
+snmp_community:
+snmp_source_interface:
+snmp_email:
+snmp_host:
+snmp_community:
+
+tacacsserver1:
+tacacsserver2:
+tacacs_key:
+tacacs_timeout:
+
+vty_exec_timeout:
+vty_priv_level:
+vty_transport_input:
+vty_transport_output:
+
+ntp_source_interface:
+ntpserver1:
+ntpserver2:
+ntpserver3:
+port-channel_load-balance:
+
+
+
 
 
 
