@@ -3,5 +3,9 @@
 
 timezone: MST -7
 enable_password: cisco
+base_user: colin 
+base_user_password: cisco
+
+
 
 
