@@ -3,7 +3,6 @@ service nagle
 no service pad
 service timestamps debug datetime localtime
 service timestamps log datetime localtime
-service password-encryption
 logging buffered {{ log_buffer }}
 logging console critical
 logging monitor warnings
