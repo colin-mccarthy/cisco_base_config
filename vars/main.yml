@@ -20,7 +20,7 @@ nameserver3: 8.8.9.9
 
 
 log_failure_count: 5
-logging_size: 15000
+logging_size: 300
 
 stp_mode: rapid-pvst
 
