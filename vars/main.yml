@@ -40,7 +40,7 @@ snmp_host: 8.8.8.8
 
 tacacsserver1: 8.8.8.8
 tacacsserver2: 8.8.8.8
-tacacs_key: 1a4b2c457a963d
+tacacs_key: <put your key here>
 tacacs_timeout: 3
 
 vty_exec_timeout: 60
