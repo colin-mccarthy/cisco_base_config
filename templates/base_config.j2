@@ -104,6 +104,12 @@ line vty 5 15
  privilege level {{ vty_priv_level }}
  transport input {{ vty_transport_input }}
  transport output {{ vty_transport_output }}
+ 
+ntp source {{ ntp_source_interface }}
+ntp server {{ ntpserver1 }}
+ntp server {{ ntpserver2 }}
+ntp server {{ ntpserver3 }} prefer
+port-channel load-balance {{ port-channel_load-balance }} 
 
 
 
