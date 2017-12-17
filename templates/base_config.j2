@@ -60,11 +60,6 @@ logging source-interface {{ logging_source_interface }}
 logging {{ logserver1 }}
 logging {{ logserver2 }} 
 
-access-list 888 permit 8.8.8.8
-access-list 888 permit 8.8.9.9
-access-list 888 permit 8.8.4.4
-
-
 snmp-server community {{ snmp_community }} RO 99
 snmp-server trap-source {{ snmp_source_interface }}
 snmp-server contact {{ snmp_email }}
