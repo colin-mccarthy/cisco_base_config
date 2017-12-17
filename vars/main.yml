@@ -1,10 +1,31 @@
 ---
 # vars file for Ansible_Cisco_ios_12.2_hardening_w-template
 
-timezone: MST -7
+
+log_buffer: 1500
+
 enable_password: cisco
+
 base_user: colin 
 base_user_password: cisco
+
+timezone: MST -7
+mtu: 1500
+
+vtp_mode: transparent
+
+nameserver1: 8.8.8.8
+nameserver2: 8.8.4.4
+nameserver3: 8.8.9.9
+
+
+log_failure_count: 
+logging_size:
+
+stp_mode:
+
+
+
 
 
 
