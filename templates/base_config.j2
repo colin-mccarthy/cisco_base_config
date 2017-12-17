@@ -6,7 +6,6 @@ service timestamps log datetime localtime
 logging buffered {{ log_buffer }}
 logging console critical
 logging monitor warnings
-enable secret 0 {{ enable_password }}
 username {{ base_user }} privilege 15 secret 0 {{ base_user_password }}
 
 aaa new-model
