@@ -1,0 +1,61 @@
+{% for host in groups['ios'] %}
+service nagle
+no service pad
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+logging buffered 15000
+logging console critical
+logging monitor warnings
+enable secret 0 {{ enable_password }}
+username {{ base_user }} privilege 15 secret 0 {{ base_user_password }}
+
+aaa new-model
+aaa authentication login default group tacacs+ local
+aaa authentication enable default group tacacs+ enable
+aaa authorization config-commands
+aaa authorization exec default group tacacs+ local
+aaa authorization commands 1 default group tacacs+ none
+aaa authorization commands 15 default group tacacs+ none
+aaa accounting exec default start-stop group tacacs+
+aaa accounting network default start-stop group tacacs+
+aaa accounting connection default start-stop group tacacs+
+aaa accounting system default start-stop group tacacs+
+aaa session-id common
+
+
+clock timezone {{ timezone }}
+clock summer-time MDT recurring
+system mtu routing {{ mtu }}
+
+vtp mode {{ vtp_mode }}
+
+ip routing
+ip domain-name {{ thenetwork.engineer }}
+ip name-server {{ nameserver1 }}
+ip name-server {{ nameserver2 }}
+ip name-server {{ nameserver3 }} 
+
+login on-failure log every {{ log_failure_count }}
+login on-success log
+archive
+ log config
+  logging enable
+  logging size {{ logging_size }}
+  notify syslog contenttype plaintext
+  hidekeys
+spanning-tree mode {{ stp_mode }}
+spanning-tree extend system-id
+vlan internal allocation policy ascending
+
+ip ssh time-out {{ ssh_timeout }}
+ip ssh version {{ ssh_version }}
+
+
+
+
+
+{% else %}
+no ip http server
+no cdp run
+{% endfor %}
