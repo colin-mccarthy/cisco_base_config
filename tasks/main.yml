@@ -21,7 +21,7 @@
 
 
   - name: CONFIGURE BANNER FROM FILE
-    ios_banner:
+    net_banner:
       provider: "{{ provider }}"
       authorize: yes
       banner: login
