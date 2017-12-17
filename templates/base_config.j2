@@ -51,6 +51,45 @@ vlan internal allocation policy ascending
 ip ssh time-out {{ ssh_timeout }}
 ip ssh version {{ ssh_version }}
 
+ip classless
+no ip http server
+no ip http secure-server
+ip tacacs source-interface {{ tacacs_source_interface }}
+
+ip access-list extended VTY_LINES
+ permit tcp 10.1.0.0 0.254.255.255 any eq 22
+ permit tcp 192.168.0.0 0.0.255.255 any eq 22
+ deny ip any any
+ 
+ip sla enable reaction-alerts
+logging source-interface {{ logging_source_interface }}
+logging {{ logserver1 }}
+logging {{ logserver2 }} 
+
+access-list 888 permit 8.8.8.8
+access-list 888 permit 8.8.9.9
+access-list 888 permit 8.8.4.4
+
+
+snmp-server community {{ snmp_community }} RO 99
+snmp-server trap-source {{ snmp_source_interface }}
+snmp-server contact {{ snmp_email }}
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps ospf cisco-specific lsa
+snmp-server host {{ snmp_host }} {{ snmp_community }}
+
+
+ 
+ 
+
 
 
 
