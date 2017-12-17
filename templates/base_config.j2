@@ -57,7 +57,6 @@ ip access-list extended VTY_LINES
  permit tcp 192.168.0.0 0.0.255.255 any eq 22
  deny ip any any
  
-ip sla enable reaction-alerts
 logging source-interface {{ logging_source_interface }}
 logging {{ logserver1 }}
 logging {{ logserver2 }} 
