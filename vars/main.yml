@@ -19,41 +19,40 @@ nameserver2: 8.8.4.4
 nameserver3: 8.8.9.9
 
 
-log_failure_count: 
-logging_size:
+log_failure_count: 5
+logging_size: 1500
 
-stp_mode:
+stp_mode: rapid-pvst
 
-ssh_timeout:
-ssh_version:
+ssh_timeout: 60
+ssh_version: 2
 
-tacacs_source_interface:
+tacacs_source_interface: Loopback0
 
-logging_source_interface:
-logserver1:
-logserver2:
+logging_source_interface: Loopback0
+logserver1: 8.8.8.8
+logserver2: 8.8.4.4
 
-snmp_community:
-snmp_source_interface:
-snmp_email:
-snmp_host:
-snmp_community:
+snmp_community: ansibull
+snmp_source_interface: Loopback0
+snmp_email: noc@yourcompany.com
+snmp_host: 8.8.8.8
 
-tacacsserver1:
-tacacsserver2:
-tacacs_key:
-tacacs_timeout:
+tacacsserver1: 8.8.8.8
+tacacsserver2: 8.8.8.8
+tacacs_key: 1a4b2c457a963d
+tacacs_timeout: 3
 
-vty_exec_timeout:
-vty_priv_level:
-vty_transport_input:
-vty_transport_output:
+vty_exec_timeout: 60
+vty_priv_level: 15
+vty_transport_input: ssh
+vty_transport_output: ssh
 
-ntp_source_interface:
-ntpserver1:
-ntpserver2:
-ntpserver3:
-port-channel_load-balance:
+ntp_source_interface: Loopback0
+ntpserver1: 8.8.8.8
+ntpserver2: 8.8.8.8
+ntpserver3: 8.8.8.8
+port-channel_load-balance: src-dst-ip 
 
 
 
