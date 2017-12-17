@@ -1,5 +1,14 @@
 {% for host in groups['ios'] %}
+service nagle
 no service pad
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+logging buffered 15000
+logging console critical
+logging monitor warnings
+enable secret 0 {{ enable password }}
+
 ip ssh version 2
 no ip domain-lookup
 no ip http server
