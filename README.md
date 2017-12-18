@@ -1,4 +1,4 @@
-Role Name
+Cisco_base
 =========
 
 Ansible role for configuring new 3560 switches.
