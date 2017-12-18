@@ -25,7 +25,7 @@
       provider: "{{ provider }}"
       authorize: yes
       banner: login
-      text: "{{ lookup('file', './vars/raw_banner.cfg') }}"
+      text: "{{ lookup('file', './vars/login_banner.cfg') }}"
       state: present
 
 
