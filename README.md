@@ -89,7 +89,7 @@ tacacs-server host 10.1.0.5 key 7 <omitted>
 tacacs-server timeout 3
 tacacs-server directed-request
 banner login ^-----------------------------------------------------------------------
-{{ host_name }}
+RTR-DEN-1
  HODL CORP
  THIS IS A HODL CORP COMPUTER SYSTEM. THIS COMPUTER
  SYSTEM, INCLUDING ALL RELATED EQUIPMENT, NETWORKS AND NETWORK DEVICES
