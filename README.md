@@ -137,6 +137,16 @@ Requirements
 
 Switch/Switches will need to have SSH connectivity set up first, before running this playbook.
 
+
+Host Variables
+--------------
+```
+[ios]
+
+RTR-DEN-1  ansible_ssh_host=192.168.161.9 ansible_network_os=ios
+RTR-DEN-2  ansible_ssh_host=192.168.161.14 ansible_network_os=ios
+```
+
 Role Variables
 --------------
 
