@@ -192,7 +192,7 @@ port_channel_load_balance: src-dst-ip
 vars/login_banner.cfg
 ```
 ^-----------------------------------------------------------------------
-{{ hostname }}
+{{ inventory_hostname }}
  HODL CORP
  THIS IS A HODL CORP COMPUTER SYSTEM. THIS COMPUTER
  SYSTEM, INCLUDING ALL RELATED EQUIPMENT, NETWORKS AND NETWORK DEVICES
