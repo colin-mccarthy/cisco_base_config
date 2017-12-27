@@ -1,0 +1,12 @@
+
+router ospf {{ ospf_instance_number }}
+router-id {{ ansible_ssh_host }}
+log-adjacency-changes
+auto-cost reference-bandwidth {{ ospf_reference_bandwidth }}
+area 0 authentication message-digest
+passive-interface default
+no passive-interface {{ upstream_int1 }}
+no passive-interface {{ upstream_int2 }}
+no passive-interface {{ upstream_po1 }}
+
+
