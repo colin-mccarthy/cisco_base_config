@@ -14,9 +14,9 @@ mtu: 1500
 
 vtp_mode: transparent
 
-nameserver1: 8.8.8.8
-nameserver2: 8.8.4.4
-nameserver3: 8.8.9.9
+nameserver1: 10.1.0.102
+nameserver2: 10.1.0.101
+nameserver3: 10.1.0.100
 
 
 log_failure_count: 5
@@ -30,16 +30,16 @@ ssh_version: 2
 tacacs_source_interface: Loopback0
 
 logging_source_interface: Loopback0
-logserver1: 8.8.8.8
-logserver2: 8.8.4.4
+logserver1: 10.1.0.1
+logserver2: 10.1.0.2
 
 snmp_community: ansibull
 snmp_source_interface: Loopback0
 snmp_email: noc@yourcompany.com
-snmp_host: 8.8.8.8
+snmp_host: 10.1.0.3
 
-tacacsserver1: 8.8.8.8
-tacacsserver2: 8.8.8.8
+tacacsserver1: 10.1.0.4
+tacacsserver2: 10.1.0.5
 tacacs_key: <put your key here>
 tacacs_timeout: 3
 
@@ -49,9 +49,9 @@ vty_transport_input: ssh
 vty_transport_output: ssh
 
 ntp_source_interface: Loopback0
-ntpserver1: 8.8.8.8
-ntpserver2: 8.8.8.8
-ntpserver3: 8.8.8.8
+ntpserver1: 10.1.0.6
+ntpserver2: 10.1.0.7
+ntpserver3: 10.1.0.8
 port_channel_load_balance: src-dst-ip 
 
 
