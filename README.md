@@ -140,6 +140,8 @@ Switch/Switches will need to have SSH connectivity set up first, before running 
 
 Host Variables
 --------------
+
+tests/inventory
 ```
 [ios]
 
