@@ -13,6 +13,62 @@ Role Variables
 
 A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
+```
+log_buffer: 15000
+
+enable_password: cisco
+
+base_user: colin 
+base_user_password: cisco
+
+timezone: MST -7
+mtu: 1500
+
+vtp_mode: transparent
+
+domain_name: thenetwork.engineer
+
+nameserver1: 10.1.0.102
+nameserver2: 10.1.0.101
+nameserver3: 10.1.0.100
+
+
+log_failure_count: 5
+logging_size: 300
+
+stp_mode: rapid-pvst
+
+ssh_timeout: 60
+ssh_version: 2
+
+tacacs_source_interface: Loopback0
+
+logging_source_interface: Loopback0
+logserver1: 10.1.0.1
+logserver2: 10.1.0.2
+
+snmp_community: ansibull
+snmp_source_interface: Loopback0
+snmp_email: noc@yourcompany.com
+snmp_host: 10.1.0.3
+
+tacacsserver1: 10.1.0.4
+tacacsserver2: 10.1.0.5
+tacacs_key: <put your key here>
+tacacs_timeout: 3
+
+vty_exec_timeout: 60
+vty_priv_level: 15
+vty_transport_input: ssh
+vty_transport_output: ssh
+
+ntp_source_interface: Loopback0
+ntpserver1: 10.1.0.6
+ntpserver2: 10.1.0.7
+ntpserver3: 10.1.0.8
+port_channel_load_balance: src-dst-ip 
+```
+
 Dependencies
 ------------
 
@@ -135,3 +191,4 @@ ntp server 10.1.0.6
 ntp server 10.1.0.7
 ntp server 10.1.0.8 prefer
 port-channel load-balance src-dst-ip 
+```
