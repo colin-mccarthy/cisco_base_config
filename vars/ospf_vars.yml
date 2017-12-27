@@ -1,0 +1,9 @@
+
+ospf_instance_number: 1
+
+ospf_reference_bandwidth: 10000
+
+upstream_int1: 
+upstream_int2:
+
+upstream_po1:
