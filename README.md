@@ -199,6 +199,18 @@ ntpserver2: 10.1.0.7
 ntpserver3: 10.1.0.8
 port_channel_load_balance: src-dst-ip 
 ```
+vars/ospf.yml
+```
+
+ospf_instance_number: 1
+
+ospf_reference_bandwidth: 10000
+
+upstream_int1: GigabitEthernet0/1
+upstream_int2: GigabitEthernet0/2
+
+upstream_po1: Port-channel1
+```
 
 vars/login_banner.cfg
 ```
