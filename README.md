@@ -3,80 +3,8 @@ Cisco_base
 
 Ansible role for configuring new 3560 switches.
 
-Requirements
-------------
-
-A switch will need to have SSH set up first, before running this playbook.
-
-Role Variables
---------------
-
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-```
-log_buffer: 15000
-
-enable_password: cisco
-
-base_user: colin 
-base_user_password: cisco
-
-timezone: MST -7
-mtu: 1500
-
-vtp_mode: transparent
-
-domain_name: thenetwork.engineer
-
-nameserver1: 10.1.0.102
-nameserver2: 10.1.0.101
-nameserver3: 10.1.0.100
-
-
-log_failure_count: 5
-logging_size: 300
-
-stp_mode: rapid-pvst
-
-ssh_timeout: 60
-ssh_version: 2
-
-tacacs_source_interface: Loopback0
-
-logging_source_interface: Loopback0
-logserver1: 10.1.0.1
-logserver2: 10.1.0.2
-
-snmp_community: ansibull
-snmp_source_interface: Loopback0
-snmp_email: noc@yourcompany.com
-snmp_host: 10.1.0.3
-
-tacacsserver1: 10.1.0.4
-tacacsserver2: 10.1.0.5
-tacacs_key: <put your key here>
-tacacs_timeout: 3
-
-vty_exec_timeout: 60
-vty_priv_level: 15
-vty_transport_input: ssh
-vty_transport_output: ssh
-
-ntp_source_interface: Loopback0
-ntpserver1: 10.1.0.6
-ntpserver2: 10.1.0.7
-ntpserver3: 10.1.0.8
-port_channel_load_balance: src-dst-ip 
-```
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
 Example Running config
 -----------------------
-
 
 ```
 service nagle
@@ -192,3 +120,106 @@ ntp server 10.1.0.7
 ntp server 10.1.0.8 prefer
 port-channel load-balance src-dst-ip 
 ```
+
+Requirements
+------------
+
+Switch/Switches will need to have SSH connectivity set up first, before running this playbook.
+
+Role Variables
+--------------
+
+A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+
+vars/main.yml
+
+```
+log_buffer: 15000
+
+enable_password: cisco
+
+base_user: colin 
+base_user_password: cisco
+
+timezone: MST -7
+mtu: 1500
+
+vtp_mode: transparent
+
+domain_name: thenetwork.engineer
+
+nameserver1: 10.1.0.102
+nameserver2: 10.1.0.101
+nameserver3: 10.1.0.100
+
+
+log_failure_count: 5
+logging_size: 300
+
+stp_mode: rapid-pvst
+
+ssh_timeout: 60
+ssh_version: 2
+
+tacacs_source_interface: Loopback0
+
+logging_source_interface: Loopback0
+logserver1: 10.1.0.1
+logserver2: 10.1.0.2
+
+snmp_community: ansibull
+snmp_source_interface: Loopback0
+snmp_email: noc@yourcompany.com
+snmp_host: 10.1.0.3
+
+tacacsserver1: 10.1.0.4
+tacacsserver2: 10.1.0.5
+tacacs_key: <put your key here>
+tacacs_timeout: 3
+
+vty_exec_timeout: 60
+vty_priv_level: 15
+vty_transport_input: ssh
+vty_transport_output: ssh
+
+ntp_source_interface: Loopback0
+ntpserver1: 10.1.0.6
+ntpserver2: 10.1.0.7
+ntpserver3: 10.1.0.8
+port_channel_load_balance: src-dst-ip 
+```
+
+vars/login_banner.cfg
+```
+^-----------------------------------------------------------------------
+{{ hostname }}
+ HODL CORP
+ THIS IS A HODL CORP COMPUTER SYSTEM. THIS COMPUTER
+ SYSTEM, INCLUDING ALL RELATED EQUIPMENT, NETWORKS AND NETWORK DEVICES
+ (SPECIFICALLY INCLUDING INTERNET ACCESS), ARE PROVIDED ONLY FOR
+ AUTHORIZED USE. HODL CORP SYSTEMS MAY BE MONITORED
+ FOR ALL LAWFUL PURPOSES, INCLUDING TO ENSURE THAT THEIR USE IS
+ AUTHORIZED, FOR MANAGEMENT OF THE SYSTEM, TO FACILITATE PROTECTION
+ AGAINST UNAUTHORIZED ACCESS, AND TO VERIFY SECURITY PROCEDURES,
+ SURVIVABILITY AND OPERATIONAL SECURITY. MONITORING INCLUDES ACTIVE
+ ATTACKS BY AUTHORIZED COMPANY ENTITIES TO TEST OR VERIFY THE SECURITY OF
+ THIS SYSTEM. DURING MONITORING, INFORMATION MAY BE EXAMINED,
+ RECORDED, COPIED AND USED FOR AUTHORIZED PURPOSES. ALL INFORMATION,
+ INCLUDING PERSONAL INFORMATION, PLACED ON OR SENT OVER THIS SYSTEM MAY
+ BE MONITORED.
+ USE OF THIS HODL CORP SYSTEM, AUTHORIZED OR UNAUTHORIZED,
+ CONSTITUTES CONSENT TO MONITORING OF THIS SYSTEM. UNAUTHORIZED USE
+ MAY SUBJECT YOU TO CRIMINAL PROSECUTION. EVIDENCE OF UNAUTHORIZED USE
+ COLLECTED DURING MONITORING MAY BE USED FOR ADMINISTRATIVE, CRIMINAL
+ OR OTHER ADVERSE ACTION. USE OF THIS SYSTEM CONSTITUTES CONSENT TO
+ MONITORING FOR THESE PURPOSES.
+-----------------------------------------------------------------------
+^
+```
+
+Dependencies
+------------
+
+A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+
+
