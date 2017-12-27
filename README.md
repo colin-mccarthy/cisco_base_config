@@ -51,6 +51,17 @@ spanning-tree extend system-id
 vlan internal allocation policy ascending
 ip ssh time-out 60
 ip ssh version 2
+!
+router ospf 1
+ router-id 192.168.161.9
+ log-adjacency-changes
+ auto-cost reference-bandwidth 10000
+ area 0 authentication message-digest
+ passive-interface default
+ no passive-interface GigabitEthernet0/1
+ no passive-interface GigabitEthernet0/2
+ no passive-interface Port-channel1
+!
 ip classless
 no ip http server
 no ip http secure-server
