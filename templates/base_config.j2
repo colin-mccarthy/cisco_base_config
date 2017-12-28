@@ -22,9 +22,8 @@ aaa accounting system default start-stop group tacacs+
 aaa session-id common
 
 
-clock timezone {{ timezone }}
+clock timezone {{ timezone }} -7
 clock summer-time {{ timezone }} recurring
-
 vtp mode {{ vtp_mode }}
 
 ip routing

@@ -11,9 +11,15 @@ base_user_password: cisco
 
 mtu: 1500
 
+timezone: MST 
+
 vtp_mode: transparent
 
 domain_name: thenetwork.engineer
+
+nameserver1: 10.1.0.102
+nameserver2: 10.1.0.101
+nameserver3: 10.1.0.100
 
 log_failure_count: 5
 logging_size: 300
@@ -45,6 +51,9 @@ vty_transport_input: ssh
 vty_transport_output: ssh
 
 ntp_source_interface: Loopback0
+ntpserver1: 10.1.0.6
+ntpserver2: 10.1.0.7
+ntpserver3: 10.1.0.8
 port_channel_load_balance: src-dst-ip 
 
 
