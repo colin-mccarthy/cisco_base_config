@@ -22,24 +22,18 @@ aaa accounting system default start-stop group tacacs+
 aaa session-id common
 
 
-clock timezone {{ timezone }}
+clock timezone {{ timezone }} -7
 clock summer-time {{ timezone }} recurring
-
 vtp mode {{ vtp_mode }}
 
 ip routing
 ip domain-name {{ domain_name }}
 ip name-server {{ nameserver1 }}
 ip name-server {{ nameserver2 }}
-ip name-server {{ nameserver3 }} 
 
 login on-failure log every {{ log_failure_count }}
 login on-success log
-archive
- log config
-  logging enable
-  notify syslog contenttype plaintext
-  hidekeys
+
 spanning-tree mode {{ stp_mode }}
 spanning-tree extend system-id
 vlan internal allocation policy ascending
@@ -51,10 +45,6 @@ ip classless
 no ip http server
 no ip http secure-server
 ip tacacs source-interface {{ tacacs_source_interface }}
-
-ip access-list extended VTY_LINES
- permit tcp 10.1.0.0 0.254.255.255 any eq 22
- permit tcp 192.168.0.0 0.0.255.255 any eq 22
  
 logging source-interface {{ logging_source_interface }}
 logging {{ logserver1 }}
@@ -80,19 +70,6 @@ tacacs-server host {{ tacacsserver2 }} key 7 {{ tacacs_key }}
 tacacs-server timeout {{ tacacs_timeout }}
 tacacs-server directed-request
 
-line con 0
-line vty 0 4
- access-class VTY_LINES in
- exec-timeout {{ vty_exec_timeout }} 0
- privilege level {{ vty_priv_level }}
- transport input {{ vty_transport_input }}
- transport output {{ vty_transport_output }}
-line vty 5 15
- access-class VTY_LINES in
- exec-timeout {{ vty_exec_timeout }} 0
- privilege level {{ vty_priv_level }}
- transport input {{ vty_transport_input }}
- transport output {{ vty_transport_output }}
  
 ntp source {{ ntp_source_interface }}
 ntp server {{ ntpserver1 }}
