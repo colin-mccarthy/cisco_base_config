@@ -4,7 +4,6 @@
   - name: OBTAIN LOGIN CREDENTIALS
     include_vars: secrets.yaml
 
-
   - name: DEFINE PROVIDER
     set_fact:
       provider:
@@ -19,6 +18,9 @@
       provider: "{{ provider }}" 
       src: base_config.j2
       save: no
+
+  - name: OBTAIN OSPF VARS
+    include_vars: ospf_vars.yml
       
       
   - name: OSPF CONFIG TEMPLATE  
