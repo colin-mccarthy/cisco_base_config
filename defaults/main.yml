@@ -4,3 +4,7 @@
 
 
 timezone: MST -7
+
+nameserver1: 10.1.0.102
+nameserver2: 10.1.0.101
+nameserver3: 10.1.0.100
