@@ -1,4 +1,4 @@
-{% for host in groups['ios'] %}
+
 service nagle
 no service pad
 service timestamps debug datetime localtime
@@ -102,13 +102,4 @@ ntp server {{ ntpserver3 }} prefer
 
 
  
- 
 
-
-
-
-
-{% else %}
-no ip http server
-no cdp run
-{% endfor %}
