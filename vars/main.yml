@@ -45,9 +45,6 @@ vty_transport_input: ssh
 vty_transport_output: ssh
 
 ntp_source_interface: Loopback0
-ntpserver1: 10.1.0.6
-ntpserver2: 10.1.0.7
-ntpserver3: 10.1.0.8
 port_channel_load_balance: src-dst-ip 
 
 
