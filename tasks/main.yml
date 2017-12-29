@@ -19,6 +19,7 @@
       src: base_config.j2
       save: no
 
+
   - name: OBTAIN OSPF VARS
     include_vars: ospf_vars.yml
       
@@ -27,8 +28,18 @@
     ios_config:   
       provider: "{{ provider }}" 
       src: ospf_config.j2
-      save: no     
+      save: no
+     
 
+  - name: LOAD VTY_LOGIN_ACL
+    ios_config:
+      provider: "{{ provider }}"
+      lines:
+        - 10 permit tcp 192.168.161.0 0.0.0.255 any eq 22
+        - 20 permit tcp 10.0.0.0 0.255.255.255 any eq 22
+        - 30 permit tcp 192.168.0.0 0.255.255.255 any eq 22
+      parents: ip access-list extended VTY_LOGIN_ACL
+      match: exact 
 
   - name: CONFIGURE BANNER FROM FILE
     net_banner:
