@@ -2,7 +2,7 @@
 ---
 
   - name: OBTAIN LOGIN CREDENTIALS
-    include_vars: secrets.yaml
+    include_vars: secrets.yml
 
   - name: DEFINE PROVIDER
     set_fact:
