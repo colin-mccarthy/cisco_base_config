@@ -70,6 +70,19 @@ tacacs-server host {{ tacacsserver2 }} key 7 {{ tacacs_key }}
 tacacs-server timeout {{ tacacs_timeout }}
 tacacs-server directed-request
 
+line con 0
+line vty 0 4
+ exec-timeout 30 0
+ privilege level 15
+ transport preferred ssh
+ transport input ssh
+ transport output ssh
+line vty 5 15
+ exec-timeout 30 0
+ privilege level 15
+ transport preferred ssh
+ transport input ssh
+ transport output ssh
  
 ntp source {{ ntp_source_interface }}
 ntp server {{ ntpserver1 }}
