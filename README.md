@@ -163,7 +163,7 @@ enable_password: cisco
 base_user: colin 
 base_user_password: cisco
 
-timezone: MST -7
+timezone: MST 
 mtu: 1500
 
 vtp_mode: transparent
