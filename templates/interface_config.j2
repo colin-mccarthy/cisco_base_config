@@ -1,68 +1,11 @@
-interface GigabitEthernet0/1
- description 
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/2
- description 
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/3
- description NCO-RTR-
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/4
- description NCO-RTR-
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/5
- description NCO-RTR-
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/6
- description NCO-RTR-
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/7
- description NCO-RTR-
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/8
- description NCO-RTR-
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/9
- description NCO-RTR-
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
-interface GigabitEthernet0/10
- description NCO-RTR-
- mtu 9198
- no ip address
- channel-group 3 mode active
-!
+
 interface GigabitEthernet0/11
+ description {{ Interface.Gi0/11.description }}
  no ip address
  shutdown
 !
 interface GigabitEthernet0/12
+ description {{ Interface.Gi0/12.description }}
  no ip address
  shutdown
 !
