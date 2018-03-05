@@ -1,7 +1,0 @@
----
-- hosts: ios
-  gather_facts: no
-  connection: local
-  serial: 1
-  roles:
-    - Cisco_base

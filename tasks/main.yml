@@ -12,22 +12,26 @@
         password: "{{ creds['password'] }}"
         auth_pass: "{{ creds['auth_pass'] }}"
 
+  - name: INCLUDE INTERFACE VARS
+    include_vars: interface_vars.yml
 
-  - name: BASE CONFIG TEMPLATE  
-    ios_config:   
-      provider: "{{ provider }}" 
-      src: base_config.j2
+#  - name: BASE CONFIG TEMPLATE  
+#    ios_config:   
+#      provider: "{{ provider }}" 
+#      src: base_config.j2
+#      save: no
+      
+#  - name: OSPF CONFIG TEMPLATE  
+#    ios_config:   
+#      provider: "{{ provider }}" 
+#      src: ospf_config.j2
+#      save: no     
+
+  - name: INTERFACE CONFIG TEMPLATE
+    ios_config:
+      provider: "{{ provider }}"
+      src: interface_config.j2
       save: no
-
-  - name: OBTAIN OSPF VARS
-    include_vars: ospf_vars.yml
-      
-      
-  - name: OSPF CONFIG TEMPLATE  
-    ios_config:   
-      provider: "{{ provider }}" 
-      src: ospf_config.j2
-      save: no     
 
 
   - name: CONFIGURE BANNER FROM FILE

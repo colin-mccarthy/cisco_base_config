@@ -1,13 +1,10 @@
-Interface:
-  po3
-    description:
-    ip_address
-  Gi0/11:
+interface:
+  "gi0/11":
     description: "Test-description"
     mtu:
     ip_address:
     aggregate: 
-  Gi0/12
+  "gi0/12":
     description: "Test-description"
     mtu:
     ip_address:
