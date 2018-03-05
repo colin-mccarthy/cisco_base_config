@@ -1,12 +1,13 @@
-interface:
-  "gi0/11":
-    description: "Test-description"
-    mtu:
-    ip_address:
-    aggregate: 
-  "gi0/12":
-    description: "Test-description"
-    mtu:
-    ip_address:
-    aggregate: channel-group 3 mode active
 
+
+interface:
+   - "gi0/11":
+       description: "Test-description"
+       mtu:
+       ip_address:
+       aggregate:
+   - "gi0/12":
+       description: "Test-description"
+       mtu:
+       ip_address:
+       aggregate: channel-group 3 mode active
