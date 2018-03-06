@@ -15,17 +15,16 @@
   - name: INCLUDE INTERFACE VARS
     include_vars: interface_vars.yml
 
-  - name: DEBUG
-    debug: var=interface['gi0/11'].description
+#  - name: DEBUG
+#    debug: var=interface['gi0/11'].description
 
-  - meta: end_play
+#  - meta: end_play
 
 
-#  - name: BASE CONFIG TEMPLATE  
-#    ios_config:   
-#      provider: "{{ provider }}" 
-#      src: base_config.j2
-#      save: no
+  - name: BASE CONFIG TEMPLATE  
+    ios_config:   
+      provider: "{{ provider }}" 
+      src: base_config.j2
       
 #  - name: OSPF CONFIG TEMPLATE  
 #    ios_config:   
@@ -33,12 +32,11 @@
 #      src: ospf_config.j2
 #      save: no     
 
-#  - name: INTERFACE CONFIG TEMPLATE
-#    ios_config:
-#      provider: "{{ provider }}"
-#      src: interface_config.j2
-#      save: no
-
+  - name: INTERFACE CONFIG TEMPLATE
+    ios_config:
+      provider: "{{ provider }}"
+      src: interface_config.j2
+      authorize: yes
 
   - name: CONFIGURE BANNER FROM FILE
     net_banner:
