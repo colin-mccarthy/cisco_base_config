@@ -2,7 +2,7 @@
 ---
 
   - name: OBTAIN LOGIN CREDENTIALS
-    include_vars: secrets.yaml
+    include_vars: secrets.yml
 
   - name: DEFINE PROVIDER
     set_fact:
@@ -14,12 +14,6 @@
 
   - name: INCLUDE INTERFACE VARS
     include_vars: interface_vars.yml
-
-#  - name: DEBUG
-#    debug: var=interface['gi0/11'].description
-
-#  - meta: end_play
-
 
   - name: BASE CONFIG TEMPLATE  
     ios_config:   
