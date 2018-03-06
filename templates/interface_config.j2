@@ -1,7 +1,6 @@
 
-
 {% for iface in interface %}
 interface {{ iface }}
-description {{ iface.description }}
-ip address {{ iface.ip_address }}
+description {{ interface[iface].description }}
 {% endfor %}
+
