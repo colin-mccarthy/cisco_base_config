@@ -209,7 +209,7 @@ interface:
      aggregate: channel-group 3 mode active
    "gi0/24":
      description: "Test-description"
-     admin_state: down
+     admin_state: shutdown
      speed:
      duplex:
      mtu:
