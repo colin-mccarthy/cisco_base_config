@@ -3,145 +3,244 @@
 interface:
    "gi0/01":
      description: "Wi/Fi Router-DIA"
+     admin_state: "no shutdown"
+     speed: 
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/02":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/03":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/04":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/05":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/06":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/07":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/08":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/09":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/10":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/11":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
      ip_address:
      vlan:
      aggregate:
    "gi0/12":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/13":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/14":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/15":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/16":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/17":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/18":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/19":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+<<<<<<< HEAD
      ip_address: 10.10.19.0 255.255.255.0
      vlan:
+=======
+     vlan:
+     ip_address:
+>>>>>>> dc66c7faeddac1d320d6e26fb687c614c49e015c
      aggregate:
    "gi0/20":
      description: "Test-description"
+     admin_state: "no shutdown"
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: 
    "gi0/21":
      description: "Test-description"
+     admin_state: shutdown
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate:
    "gi0/22":
      description: "Test-description"
+     admin_state: shutdown
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: channel-group 3 mode active
    "gi0/23":
      description: "Test-description"
+     admin_state: shutdown
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: channel-group 3 mode active
    "gi0/24":
      description: "Test-description"
+     admin_state: shutdown
+     speed:
+     duplex:
      mtu:
+     vlan:
      ip_address:
      vlan:
      aggregate: channel-group 3 mode active

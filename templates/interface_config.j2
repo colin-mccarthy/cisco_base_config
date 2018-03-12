@@ -6,10 +6,14 @@ interface {{ iface }}
 description {{ interface[iface].description }}
 {% endif %}
 {% if admin_state is defined %}
+<<<<<<< HEAD
 {% if admin_state == "up" %}
  no shutdown
 {% elif admin_state == "down" %}
  shutdown
+=======
+{{ interface[iface].adminstate }}
+>>>>>>> dc66c7faeddac1d320d6e26fb687c614c49e015c
 {% endif %}
 {% endif %}
 {% if speed is defined %}
@@ -22,3 +26,10 @@ description {{ interface[iface].description }}
  switchport access vlan {{ interface[iface].vlan }}
 {% endif %}
 {% endfor %}
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> dc66c7faeddac1d320d6e26fb687c614c49e015c
