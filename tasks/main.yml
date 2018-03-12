@@ -12,8 +12,8 @@
         password: "{{ creds['password'] }}"
         auth_pass: "{{ creds['auth_pass'] }}"
 
-  - name: INCLUDE INTERFACE VARS
-    include_vars: interface_vars.yml
+#  - name: INCLUDE INTERFACE VARS
+#    include_vars: interface_vars.yml
 
   - name: BASE CONFIG TEMPLATE  
     ios_config:   

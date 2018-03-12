@@ -1,6 +1,24 @@
 
+
 {% for iface in interface %}
 interface {{ iface }}
+{% if description is defined %}
 description {{ interface[iface].description }}
+{% endif %}
+{% if admin_state is defined %}
+{% if admin_state == "up" %}
+ no shutdown
+{% elif admin_state == "down" %}
+ shutdown
+{% endif %}
+{% endif %}
+{% if speed is defined %}
+ speed {{ interface[iface].speed }} 
+{% endif %}
+{% if duplex is defined %}
+ duplex {{ interface[iface].duplex }} 
+{% endif %}
+{% if vlan is defined %}
+ switchport access vlan {{ interface[iface].vlan }}
+{% endif %}
 {% endfor %}
-
