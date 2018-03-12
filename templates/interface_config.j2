@@ -5,10 +5,7 @@ interface {{ iface }}
 description {{ interface[iface].description }}
 {% endif %}
 {% if admin_state is defined %}
-{% if admin_state == "up" %}
- no shutdown
-{% elif admin_state == "down" %}
- shutdown
+{{ interface[iface].adminstate }}
 {% endif %}
 {% endif %}
 {% if speed is defined %}
