@@ -12,13 +12,13 @@ description {{ interface[iface].description }}
 {% endif %}
 {% endif %}
 {% if speed is defined %}
- speed {{ speed }}
+ speed {{ interface[iface].speed }} 
 {% endif %}
 {% if duplex is defined %}
- duplex {{ duplex }}
+ duplex {{ interface[iface].duplex }} 
 {% endif %}
 {% if vlan is defined %}
- switchport access vlan {{ vlan }}
+ switchport access vlan {{ interface[iface].vlan }}
 {% endif %}
 {% endfor %}
 
