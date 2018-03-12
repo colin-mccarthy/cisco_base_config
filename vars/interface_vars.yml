@@ -7,6 +7,7 @@ interface:
      speed: 
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/02":
@@ -15,6 +16,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/03":
@@ -23,6 +25,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/04":
@@ -31,6 +34,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/05":
@@ -39,6 +43,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/06":
@@ -47,6 +52,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/07":
@@ -55,6 +61,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/08":
@@ -63,6 +70,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/09":
@@ -71,6 +79,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/10":
@@ -79,6 +88,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/11":
@@ -95,6 +105,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/13":
@@ -103,6 +114,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/14":
@@ -111,6 +123,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/15":
@@ -119,6 +132,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/16":
@@ -127,6 +141,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/17":
@@ -135,6 +150,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/18":
@@ -143,6 +159,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/19":
@@ -151,6 +168,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/20":
@@ -159,6 +177,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: 
    "gi0/21":
@@ -167,6 +186,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate:
    "gi0/22":
@@ -175,6 +195,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: channel-group 3 mode active
    "gi0/23":
@@ -183,6 +204,7 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: channel-group 3 mode active
    "gi0/24":
@@ -191,5 +213,6 @@ interface:
      speed:
      duplex:
      mtu:
+     vlan:
      ip_address:
      aggregate: channel-group 3 mode active
