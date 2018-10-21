@@ -1,20 +1,18 @@
-
-{% for iface in interface %}
+{% for iface,data in interface.items() %}
 interface {{ iface }}
-{% if 'description' in interface[iface] %}
-description {{ interface[iface].description }}
+{% if data.description is defined %}
+description {{ data.description }}
 {% endif %}
-{% if 'admin_state' in interface[iface] %}
-{{ interface[iface].admin_state }}
+{% if data.admin_state is defined %}
+admin_state: {{ data.admin_state }}
 {% endif %}
-{% if 'speed' in interface[iface] %}
-speed {{ interface[iface].speed }}
+{% if data.speed %}
+speed {{ data.speed }}
 {% endif %}
-{% if 'duplex' in interface[iface] %}
-duplex {{ interface[iface].duplex }}
+{% if data.duplex %}
+duplex {{ data.duplex }}
 {% endif %}
-{% if 'vlan' in interface[iface] %}
-switchport access vlan {{ interface[iface].vlan }}
+{% if data.vlan %}
+switchport access vlan {{ data.vlan }}
 {% endif %}
 {% endfor %}
-

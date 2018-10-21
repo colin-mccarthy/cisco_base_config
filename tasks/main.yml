@@ -24,7 +24,7 @@
 
   - name: INTERFACE CONFIG TEMPLATE
     ios_config:
-      src: interface_aj.j2
+      src: interface_config.j2
       authorize: yes
 
 #  - name: CONFIGURE BANNER FROM FILE
