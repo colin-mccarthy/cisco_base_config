@@ -1,6 +1,10 @@
 
 ---
 
+  - name: GET VARS
+    include_vars: interface_vars.yml
+
+
   - name: CONFIGURE BANNER FROM FILE
     net_banner:
       banner: login
