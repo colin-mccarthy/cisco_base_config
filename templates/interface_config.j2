@@ -4,7 +4,7 @@ interface {{ iface }}
 description {{ data.description }}
 {% endif %}
 {% if data.admin_state is defined %}
-admin_state: {{ data.admin_state }}
+{{ data.admin_state }}
 {% endif %}
 {% if data.speed %}
 speed {{ data.speed }}
