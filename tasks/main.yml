@@ -23,11 +23,19 @@
   - name: OSPF CONFIG TEMPLATE  
     ios_config:   
       src: ospf_config.j2
-      save: no     
+      save: no 
 
-  - name: INTERFACE CONFIG TEMPLATE
+
+  - name: POC TEMPLATE
     ios_config:
-      src: interface_config.j2
-      save: yes
+      src: poc.j2
+      save: no
+
+
+
+#  - name: INTERFACE CONFIG TEMPLATE
+#    ios_config:
+#      src: interface_config.j2
+#      save: yes
 
 

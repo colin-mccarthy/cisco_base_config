@@ -1,0 +1,122 @@
+interface GigabitEthernet0/2
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/3
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/4
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/5
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/6
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/7
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/8
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/9
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/10
+ description Test-description
+ no switchport
+ ip address 10.10.10.169 255.255.255.252
+ no ip redirects
+ no ip proxy-arp
+ duplex full
+!
+interface GigabitEthernet0/11
+ description Test-description
+ no switchport
+ ip address 10.8.10.10 255.255.255.252 secondary
+ ip address 10.9.10.10 255.255.255.252
+ ip helper-address 10.10.10.10
+ ip helper-address 10.10.10.11
+ no ip redirects
+!
+interface GigabitEthernet0/12
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/13
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/14
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/15
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/16
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/17
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/18
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/19
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/20
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/21
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/22
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/23
+ description Test-description
+ no switchport
+ no ip address
+!
+interface GigabitEthernet0/24
+ description Test-description
+ no switchport
+ no ip address
+ duplex full
