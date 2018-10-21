@@ -40,55 +40,52 @@ interface GigabitEthernet0/9
 !
 interface GigabitEthernet0/10
  description Test-description
- no switchport
- ip address 10.10.10.169 255.255.255.252
- no ip redirects
- no ip proxy-arp
+ switchport access vlan 10
+ switchport mode access
+ speed 1000
  duplex full
 !
 interface GigabitEthernet0/11
  description Test-description
- no switchport
- ip address 10.8.10.10 255.255.255.252 secondary
- ip address 10.9.10.10 255.255.255.252
- ip helper-address 10.10.10.10
- ip helper-address 10.10.10.11
- no ip redirects
+ switchport access vlan 10
+ switchport mode access
+ speed 100
+ duplex full
 !
 interface GigabitEthernet0/12
  description Test-description
- no switchport
- no ip address
+ switchport access vlan 10
+ switchport mode access
 !
 interface GigabitEthernet0/13
  description Test-description
- no switchport
- no ip address
+ switchport access vlan 10
+ switchport mode access
 !
 interface GigabitEthernet0/14
  description Test-description
- no switchport
- no ip address
+ switchport access vlan 10
+ switchport mode access
 !
 interface GigabitEthernet0/15
  description Test-description
- no switchport
- no ip address
+ switchport access vlan 10
+ switchport mode access
 !
 interface GigabitEthernet0/16
  description Test-description
- no switchport
- no ip address
+ switchport access vlan 10
+ switchport mode access
 !
 interface GigabitEthernet0/17
  description Test-description
- no switchport
- no ip address
+ switchport access vlan 10
+ switchport mode access
 !
 interface GigabitEthernet0/18
  description Test-description
- no switchport
- no ip address
+ switchport access vlan 10
+ switchport mode access
 !
 interface GigabitEthernet0/19
  description Test-description
@@ -119,4 +116,5 @@ interface GigabitEthernet0/24
  description Test-description
  no switchport
  no ip address
+ speed 100
  duplex full
