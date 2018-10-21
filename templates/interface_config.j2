@@ -1,25 +1,20 @@
 
-
 {% for iface in interface %}
 interface {{ iface }}
-{% if description is defined %}
- description {{ interface[iface].description }}
+{% if 'description' in interface[iface] %}
+description {{ interface[iface].description }}
 {% endif %}
-{% if admin_state is defined %}
- {{ interface[iface].adminstate }}
+{% if 'admin_state' in interface[iface] %}
+{{ interface[iface].admin_state }}
 {% endif %}
+{% if 'speed' in interface[iface] %}
+speed {{ interface[iface].speed }}
 {% endif %}
-{% if speed is defined %}
- speed {{ interface[iface].speed }} 
+{% if 'duplex' in interface[iface] %}
+duplex {{ interface[iface].duplex }}
 {% endif %}
-{% if duplex is defined %}
- duplex {{ interface[iface].duplex }} 
-{% endif %}
-{% if vlan is defined %}
- switchport access vlan {{ interface[iface].vlan }}
+{% if 'vlan' in interface[iface] %}
+switchport access vlan {{ interface[iface].vlan }}
 {% endif %}
 {% endfor %}
-
-
-
 

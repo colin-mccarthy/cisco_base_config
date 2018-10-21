@@ -1,43 +1,32 @@
 
 ---
 
-  - name: OBTAIN LOGIN CREDENTIALS
-    include_vars: secrets.yml
+  - name: CONFIGURE BANNER FROM FILE
+    net_banner:
+      banner: login
+      text: "{{ lookup('file', './vars/login_banner.cfg') }}"
+      state: present
 
-  - name: DEFINE PROVIDER
-    set_fact:
-      provider:
-        host: "{{ inventory_hostname }}"
-        username: "{{ creds['username'] }}"
-        password: "{{ creds['password'] }}"
-        auth_pass: "{{ creds['auth_pass'] }}"
 
-#  - name: INCLUDE INTERFACE VARS
-#    include_vars: interface_vars.yml
-
-  - name: BASE CONFIG TEMPLATE  
-    ios_config:   
-      provider: "{{ provider }}" 
-      src: base_config.j2
+#  - name: BASE CONFIG TEMPLATE  
+#    ios_config:   
+#      provider: "{{ provider }}" 
+#      src: base_config.j2
       
 #  - name: OSPF CONFIG TEMPLATE  
 #    ios_config:   
-#      provider: "{{ provider }}" 
 #      src: ospf_config.j2
 #      save: no     
 
   - name: INTERFACE CONFIG TEMPLATE
     ios_config:
-      provider: "{{ provider }}"
-      src: interface_config.j2
+      src: interface_aj.j2
       authorize: yes
 
-  - name: CONFIGURE BANNER FROM FILE
-    net_banner:
-      provider: "{{ provider }}"
-      authorize: yes
-      banner: login
-      text: "{{ lookup('file', './vars/login_banner.cfg') }}"
-      state: present
+#  - name: CONFIGURE BANNER FROM FILE
+#    net_banner:
+#      banner: login
+#      text: "{{ lookup('file', './vars/login_banner.cfg') }}"
+#      state: present
 
 
