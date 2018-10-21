@@ -184,7 +184,7 @@ interface:
      aggregate: 
    "gi0/21":
      description: "Test-description"
-     admin_state: shutdown
+     admin_state: "no shutdown"
      speed:
      duplex:
      mtu:
@@ -193,7 +193,7 @@ interface:
      aggregate:
    "gi0/22":
      description: "Test-description"
-     admin_state: shutdown
+     admin_state: "no shutdown"
      speed:
      duplex:
      mtu:
@@ -202,7 +202,7 @@ interface:
      aggregate: channel-group 3 mode active
    "gi0/23":
      description: "Test-description"
-     admin_state: shutdown
+     admin_state: "no shutdown"
      speed:
      duplex:
      mtu:
@@ -211,7 +211,7 @@ interface:
      aggregate: channel-group 3 mode active
    "gi0/24":
      description: "Test-description"
-     admin_state: shutdown
+     admin_state: "no shutdown"
      speed:
      duplex:
      mtu:
