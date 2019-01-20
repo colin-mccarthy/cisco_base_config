@@ -18,20 +18,12 @@
   - name: BASE CONFIG TEMPLATE  
     ios_config:   
       src: base_config.j2
-      save: no
+
       
   - name: OSPF CONFIG TEMPLATE  
     ios_config:   
       src: ospf_config.j2
-      save: no 
-
-
-  - name: POC TEMPLATE
-    ios_config:
-      src: poc.j2
-      save: no
-
-
+ 
 
 #  - name: INTERFACE CONFIG TEMPLATE
 #    ios_config:
